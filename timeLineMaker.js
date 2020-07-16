@@ -2,7 +2,7 @@
 
 var MAIN_DATA;
 
-//½«ÊıÑ§¼oÁ¢·¨·µ»ØÎªÌìÎÄ¼oÁ¢·¨
+//å°†æ•°å­¦ç´€ç«‹æ³•è¿”å›ä¸ºå¤©æ–‡ç´€ç«‹æ³•
 function yearMath2Astro(ma) {
 
     var astr = "";
@@ -22,7 +22,7 @@ function yearMath2Astro(ma) {
 
 
 
-//ÏÂÃæÕâ¶Ñ¹¹ÔìÄÜ¹»»»ĞĞµÄcanvas¹¦ÄÜ context.wrapText(text,x,y,maxWidth,lineHeight)
+//ä¸‹é¢è¿™å †æ„é€ èƒ½å¤Ÿæ¢è¡Œçš„canvasåŠŸèƒ½ context.wrapText(text,x,y,maxWidth,lineHeight)
 CanvasRenderingContext2D.prototype.wrapText = function (text, x, y, maxWidth, lineHeight) {
     if (typeof text != 'string' || typeof x != 'number' || typeof y != 'number') {
         return;
@@ -38,7 +38,7 @@ CanvasRenderingContext2D.prototype.wrapText = function (text, x, y, maxWidth, li
         lineHeight = (canvas && parseInt(window.getComputedStyle(canvas).lineHeight)) || parseInt(window.getComputedStyle(document.body).lineHeight);
     }
 
-    // ×Ö·û·Ö¸ôÎªÊı×é
+    // å­—ç¬¦åˆ†éš”ä¸ºæ•°ç»„
     var arrText = text.split('');
     var line = '';
 
@@ -57,7 +57,7 @@ CanvasRenderingContext2D.prototype.wrapText = function (text, x, y, maxWidth, li
     context.fillText(line, x, y);
 };
 
-//°Ñ×¨Ìâ·µ»ØÎªÑÕÉ«
+//æŠŠä¸“é¢˜è¿”å›ä¸ºé¢œè‰²
 function topic2Color(str) {
     switch (str) {
         case 'culture': return 'rgba(255,20,60,0.5)'; break;
@@ -70,9 +70,9 @@ function topic2Color(str) {
     }
 }
 
-//Æô¶¯¹³×Ó
+//å¯åŠ¨é’©å­
 function goRun() {
-    //»ñÈ¡Ô­Ê¼Êı¾İ
+    //è·å–åŸå§‹æ•°æ®
     MAIN_DATA = JSON.parse(document.getElementById('rawCode').value);
     console.log(MAIN_DATA);
 
@@ -82,14 +82,14 @@ function goRun() {
 //Kernel
 function printTimeLine(tl) {
 
-    var Dhead = 50;/*titleÔ¤Áô¿Õ¼ä*/
-    var Dface = 50;/*×İÖáÔ¤Áô¿Õ¼ä*/
+    var Dhead = 50;/*titleé¢„ç•™ç©ºé—´*/
+    var Dface = 50;/*çºµè½´é¢„ç•™ç©ºé—´*/
 
-    //´´½¨»­²¼
+    //åˆ›å»ºç”»å¸ƒ
     var canvas = document.createElement('canvas');
     canvas.id = "timeline";
     canvas.width = 2*Dhead+(tl.endY - tl.startY)*tl.yearW;
-    canvas.height = Dface + tl.maxRe * tl.maxSlot * tl.eventH/*ÊÂ¼şÔ¤Éèheight*/+50;
+    canvas.height = Dface + tl.maxRe * tl.maxSlot * tl.eventH/*äº‹ä»¶é¢„è®¾height*/+50;
     document.getElementById('OutputZone').appendChild(canvas);
     var ctx = canvas.getContext("2d");
 
@@ -97,43 +97,43 @@ function printTimeLine(tl) {
     var cH = canvas.height;
     
 
-    //±³¾°Ìî³ä
+    //èƒŒæ™¯å¡«å……
     ctx.fillStyle = "rgba(240,248,255,0.9)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    //»æÖÆtitle
+    //ç»˜åˆ¶title
     ctx.font = "2em Arial";
     ctx.fillStyle = "black";
     ctx.textAlign = "center";
     ctx.textBaseline = "top";
     ctx.fillText(tl.title, cW / 2, 0)
 
-    //»æÖÆÊ±¼äÖá
+    //ç»˜åˆ¶æ—¶é—´è½´
     ctx.beginPath();
     ctx.moveTo(0, Dface);
     ctx.lineTo(cW, Dface);
     ctx.strokeStyle = "black";
     ctx.stroke();
 
-    //×ø±ê
+    //åæ ‡
     ctx.font = "0.7em Georgia";
     ctx.fillStyle = "black";
     ctx.textAlign = "start";
     ctx.textBaseline = "top";
 
-    ctx.beginPath();//ÆğµãÄê
+    ctx.beginPath();//èµ·ç‚¹å¹´
     ctx.moveTo(Dhead, Dface);
     ctx.lineTo(Dhead, Dface + 10);
     ctx.stroke();
     ctx.fillText(yearMath2Astro(tl.startY), Dhead, Dface - 10);
 
-    ctx.beginPath();//ÖÕµãÄê
+    ctx.beginPath();//ç»ˆç‚¹å¹´
     ctx.moveTo((tl.endY-tl.startY)*tl.yearW+Number(Dhead), Dface);
     ctx.lineTo((tl.endY - tl.startY) * tl.yearW + Number(Dhead), Dface + 10);
     ctx.stroke();
     ctx.fillText(yearMath2Astro(tl.endY), ((tl.endY - tl.startY) * tl.yearW + Number(Dhead)), Dface - 10);
 
-    //Äê´ú±ê¼Ç
+    //å¹´ä»£æ ‡è®°
     for (var i = 1; i*10 < (Number(tl.endY)-Number(tl.startY)); i++) {
         ctx.beginPath();
         ctx.moveTo(Dhead + 10*i * tl.yearW, Dface);
@@ -142,14 +142,14 @@ function printTimeLine(tl) {
         ctx.fillText(yearMath2Astro(10*i + Number(tl.startY)), Dhead + 10*i * tl.yearW, Dface - 10);
     };
 
-    //»æÖÆ×İÖá
+    //ç»˜åˆ¶çºµè½´
     ctx.beginPath();
     ctx.moveTo(Dhead, Dface);
     ctx.lineTo(Dhead, Dface+Number(tl.maxRe*tl.maxSlot*tl.eventH));
     ctx.strokeStyle = "black";
     ctx.stroke();
 
-    //×İÖáÃûÄ¿
+    //çºµè½´åç›®
     ctx.font = "1em Georgia";
     ctx.fillStyle = "black";
     ctx.textAlign = "center";
@@ -160,7 +160,7 @@ function printTimeLine(tl) {
     }
 
 
-    //»æÖÆÊÂ¼ş
+    //ç»˜åˆ¶äº‹ä»¶
     var slot_count = [];
     for (var i = 0; i < reNames.length; i++) {
         slot_count[i] = 0;
@@ -196,7 +196,7 @@ function printTimeLine(tl) {
         drawEvent(tl.son[i])
     };
 
-    //»æÖÆË®Ó¡
+    //ç»˜åˆ¶æ°´å°
     if (tl.watermark==undefined||tl.watermark=="") {
         tl.watermark="Powered by GreatBaron"
     };
