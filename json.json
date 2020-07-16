@@ -1,0 +1,279 @@
+{
+  "title": "希腊古典时代",
+  "startY": "-499",
+  "endY": "-319",
+  "yearW": "10",
+  "maxRe": "3",
+  "reName": "泛希腊,近东中东,远东",
+  "maxSlot": "7",
+  "eventH": "18",
+  "watermark": "@GreatBaron",
+  "son": [
+    {
+      "title": "希波战争",
+      "subtitle": "Greco-Persian War(499~449BC)",
+      "beginY": "-498",
+      "endY": "-448",
+      "importance": "1",
+      "topic": "default",
+      "re": "0"
+    },
+    {
+      "title": "普拉提亚之役",
+      "subtitle": "(479BC)",
+      "beginY": "-478",
+      "endY": "-478",
+      "importance": "1",
+      "topic": "default",
+      "re": "0"
+    },
+    {
+      "title": "伯里克利",
+      "subtitle": "(c.495~429BC)",
+      "beginY": "-494",
+      "endY": "-428",
+      "importance": "1",
+      "topic": "politic",
+      "re": "0"
+    },
+    {
+      "title": "薛西斯一世统治波斯",
+      "subtitle": "(485~465BC)",
+      "beginY": "-485",
+      "endY": "-464",
+      "importance": "1",
+      "topic": "politic",
+      "re": "1"
+    },
+    {
+      "title": "苏格拉底",
+      "subtitle": "(c.470~399BC)",
+      "beginY": "-469",
+      "endY": "-398",
+      "importance": "1",
+      "topic": "philosophy",
+      "re": "0"
+    },
+    {
+      "title": "阿塔薛西斯一世统治波斯",
+      "subtitle": "(465~425BC)",
+      "beginY": "-464",
+      "endY": "-424",
+      "importance": "1",
+      "topic": "politic",
+      "re": "1"
+    },
+    {
+      "title": "麦加腊冲突",
+      "subtitle": "",
+      "beginY": "-458",
+      "endY": "-445",
+      "importance": "0.5",
+      "topic": "politic",
+      "re": "0"
+    },
+    {
+      "title": "伯罗奔尼撒战争",
+      "subtitle": "Peloponnesian War(431~404BC)",
+      "beginY": "-430",
+      "endY": "-403",
+      "importance": "1",
+      "topic": "default",
+      "re": "0"
+    },
+    {
+      "title": "大流士二世统治波斯",
+      "subtitle": "(423~404BC)",
+      "beginY": "-422",
+      "endY": "-403",
+      "importance": "1",
+      "topic": "politic",
+      "re": "1"
+    },
+    {
+      "title": "公羊河之役",
+      "subtitle": "(405BC)",
+      "beginY": "-404",
+      "endY": "-404",
+      "importance": "1",
+      "topic": "default",
+      "re": "0"
+    },
+    {
+      "title": "阿塔薛西斯二世统治波斯",
+      "subtitle": "(404~358BC)",
+      "beginY": "-403",
+      "endY": "-357",
+      "importance": "1",
+      "topic": "politic",
+      "re": "1"
+    },
+    {
+      "title": "阿塔薛西斯三世统治波斯",
+      "subtitle": "(358~338BC)",
+      "beginY": "-357",
+      "endY": "-337",
+      "importance": "1",
+      "topic": "politic",
+      "re": "1"
+    },
+    {
+      "title": "阿塔薛西斯四世统治波斯",
+      "subtitle": "(338~336BC)",
+      "beginY": "-337",
+      "endY": "-335",
+      "importance": "1",
+      "topic": "politic",
+      "re": "1"
+    },
+    {
+      "title": "大流士三世统治波斯",
+      "subtitle": "(336~330BC)",
+      "beginY": "-335",
+      "endY": "-329",
+      "importance": "1",
+      "topic": "politic",
+      "re": "1"
+    },
+    {
+      "title": "色诺芬的远征",
+      "subtitle": "(401~400BC)",
+      "beginY": "-400",
+      "endY": "-399",
+      "importance": "1",
+      "topic": "default",
+      "re": "1"
+    },
+    {
+      "title": "埃及独立",
+      "subtitle": "(404BC)",
+      "beginY": "-403",
+      "endY": "-403",
+      "importance": "1",
+      "topic": "politic",
+      "re": "1"
+    },
+    {
+      "title": "发明投石机",
+      "subtitle": "(400BC)",
+      "beginY": "-399",
+      "endY": "-399",
+      "importance": "1",
+      "topic": "tex",
+      "re": "0"
+    },
+    {
+      "title": "斯巴达战争",
+      "subtitle": "(397~371BC)",
+      "beginY": "-398",
+      "endY": "-370",
+      "importance": "1",
+      "topic": "default",
+      "re": "0"
+    },
+    {
+      "title": "亚里士多德",
+      "subtitle": "(384~322BC)",
+      "beginY": "-383",
+      "endY": "-321",
+      "importance": "1",
+      "topic": "philosophy",
+      "re": "0"
+    },
+    {
+      "title": "腓力二世",
+      "subtitle": "(382~336BC)",
+      "beginY": "-381",
+      "endY": "-335",
+      "importance": "1",
+      "topic": "politic",
+      "re": "0"
+    },
+    {
+      "title": "同盟者战争",
+      "subtitle": "(357~355BC)",
+      "beginY": "-356",
+      "endY": "-354",
+      "importance": "1",
+      "topic": "default",
+      "re": "0"
+    },
+    {
+      "title": "马其顿的崛起",
+      "subtitle": "(340~323BC)",
+      "beginY": "-339",
+      "endY": "-322",
+      "importance": "1",
+      "topic": "politic",
+      "re": "0"
+    },
+    {
+      "title": "亚历山大三世",
+      "subtitle": "(356~323BC)",
+      "beginY": "-354.56",
+      "endY": "-321.5",
+      "importance": "1",
+      "topic": "politic",
+      "re": "0"
+    },
+
+    {
+      "title": "孔子",
+      "subtitle": "(c.551~479BC)",
+      "beginY": "-499",
+      "endY": "-478",
+      "importance": "1",
+      "topic": "culture",
+      "re": "2"
+    },
+    {
+      "title": "三家分晋",
+      "subtitle": "(c.453~438BC)",
+      "beginY": "-452",
+      "endY": "-437",
+      "importance": "1",
+      "topic": "default",
+      "re": "2"
+    },
+    {
+      "title": "田氏代齐",
+      "subtitle": "(389BC)",
+      "beginY": "-388",
+      "endY": "-388",
+      "importance": "1",
+      "topic": "topic",
+      "re": "2"
+    },
+    {
+      "title": "商鞅变法",
+      "subtitle": "(356~350BC)",
+      "beginY": "-355",
+      "endY": "-349",
+      "importance": "1",
+      "topic": "politic",
+      "re": "2"
+    },
+    {
+      "title": "桂陵之战",
+      "subtitle": "(353BC)",
+      "beginY": "-352",
+      "endY": "-352",
+      "importance": "1",
+      "topic": "default",
+      "re": "2"
+    },
+    {
+      "title": "马陵之战",
+      "subtitle": "(341BC)",
+      "beginY": "-340",
+      "endY": "-340",
+      "importance": "1",
+      "topic": "default",
+      "re": "2"
+    }
+
+
+
+  ]
+
+}
