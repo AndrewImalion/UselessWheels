@@ -63,6 +63,8 @@ function topic2Color(str) {
         case 'culture': return 'rgba(255,20,60,0.5)'; break;
         case 'philosophy': return 'rgba(255,0,0,0.5)'; break;
         case 'politic': return 'rgba(0,0,255,0.5)'; break;
+        case 'regnal': return 'rgba(128,0,128,0.5)'; break;
+        case 'regnal2': return 'rgba(208,32,144,0.5)'; break;
         case 'tex': return 'rgba(252,215,0,0.5)'; break;
 
 
@@ -172,13 +174,13 @@ function printTimeLine(tl) {
         if (duration==0) {
             duration=1
         }
-        var bY = eve.re * Number(tl.maxSlot) * tl.eventH + slot_count[eve.re];
+        var bY = eve.re * Number(tl.maxSlot) * tl.eventH //+ slot_count[eve.re];
 
         bX = (bX-Number(tl.startY))*tl.yearW + Dface;
         bY = bY+slot_count[eve.re]*tl.eventH + Dhead;
 
         ctx.fillStyle = topic2Color(eve.topic);
-        ctx.fillRect(bX, bY, duration, Number(tl.eventH));
+        ctx.fillRect(bX, bY, duration, Number(tl.eventH)-tl.eventH/18);
         console.log(bX, bY)
 
         ctx.font = "0.75em Arial";
